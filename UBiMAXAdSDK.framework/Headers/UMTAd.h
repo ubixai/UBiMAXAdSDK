@@ -39,6 +39,10 @@ typedef NS_ENUM(NSInteger, UMTAdShowStatus) {
 
 - (BOOL)isReady;
 
+- (uint64_t)getEcpm;
+
+- (NSString *)getAdNetworkName;
+
 @end
 
 NS_ASSUME_NONNULL_END
