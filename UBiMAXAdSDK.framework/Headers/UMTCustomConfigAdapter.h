@@ -21,13 +21,14 @@
 
 /// adn初始化方法
 /// @param initConfig 初始化配置，包括appid、appkey基本信息和部分用户传递配置
-- (void)initializeAdapterWithConfiguration:(UMTAdnSDKInitConfig *_Nullable)initConfig;
+- (void)initializeAdapterWithConfiguration:(UMTAdnSDKInitConfig *_Nullable)initConfig
+                                 completed:(void(^)(BOOL succ, NSError *error))handler;
 
 /// adapter的版本号
 - (NSString *_Nonnull)adapterVersion;
 
 /// adn的版本号
-- (NSString *_Nonnull)networkSdkVersion;
+- (NSString *_Nonnull)adnSdkVersion;
 
 /// 隐私权限更新，用户更新隐私配置时触发，初始化方法调用前一定会触发一次
 - (void)didRequestAdPrivacyConfigUpdate:(NSDictionary *)config;

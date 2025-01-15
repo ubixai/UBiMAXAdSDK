@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, UMTAdShowStatus) {
 
 @property (nonatomic, weak) id <UMTAdDelegate> showDelegate;
 
+@property (nonatomic, copy) NSString *requestId;
+
 @property (nonatomic, copy) NSString *slotId;
 
 @property (nonatomic, assign) UMTAdType adType;

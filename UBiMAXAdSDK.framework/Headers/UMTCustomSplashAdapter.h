@@ -25,12 +25,6 @@
 /// @param parameter 广告展示参数
 - (void)showSplashAdInWindow:(UIWindow *)window parameter:(NSDictionary *)parameter;
 
-/// 广告关闭实现，在外部使用开发者调用`destoryAd`时触发
-- (void)dismissSplashAd;
-
-/// 当前加载的广告的状态
-- (UMTMediatedAdStatus)mediatedAdStatus;
-
 @optional
 
 /// 代理，开发者需使用该对象回调事件，Objective-C下自动生成无需设置，Swift需声明

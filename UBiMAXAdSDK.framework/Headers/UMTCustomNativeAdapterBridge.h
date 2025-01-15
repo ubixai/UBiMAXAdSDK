@@ -44,37 +44,37 @@
 
 /// 广告展示时调用该方法，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter didVisibleWithMediatedNativeAd:(id _Nonnull)nativeAd;
 
 /// 在曝光失败调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter exposureFailWithMediatedNativeAd:(id _Nonnull)nativeAd andError:(NSError *_Nonnull)error;
 
 /// 广告点击事件时调用该方法，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter didClickWithMediatedNativeAd:(id _Nonnull)nativeAd;
 
 /// 在广告即将展示详情页或者app store时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter willPresentFullScreenModalWithMediatedNativeAd:(id _Nonnull)nativeAd;
 
 /// 在广告落地页关闭时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter didDismissFullScreenModalWithMediatedNativeAd:(id _Nonnull)nativeAd;
 
 /// 广告摇一摇提示view消除时调用该方法，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter didShakeViewDismissWithNativeAd:(id _Nonnull)nativeAd;
 
 /// 此方法在强制删除Ad视图容器时调用。
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter adContainerViewDidRemovedWithNativeAd:(id _Nonnull)nativeAd;
 #pragma mark - Express ad
 /// 仅限模板广告，在渲染成功或者模板广告的尺寸更新时调用，直接调用即可，无需做响应判断
@@ -105,23 +105,17 @@
 /// 视频广告中视频播放状态变更的时候调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
 /// @param state 播放状态
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter videoStateDidChangedWithState:(UMTVideoPlayerStatus)state andNativeAd:(id _Nonnull)nativeAd;
-
-/// 激励信息流视频进入倒计时状态时调用
-/// @param adapter 当前适配器
-/// @param countDown : 倒计时
-/// @Note : 当前该回调仅适用于CSJ广告
-- (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter rewardDidCountDown:(NSInteger)countDown andNativeAd:(id _Nonnull)nativeAd;
 
 /// 视频广告中视频视图被点击时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter videoDidClick:(id _Nonnull)nativeAd;
 
 /// 视频广告中视频播放完成时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UMT的UIView
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter videoDidPlayFinish:(id _Nonnull)nativeAd;
 
 @end

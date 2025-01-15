@@ -21,6 +21,8 @@ typedef NS_ENUM (NSInteger, UMTMediationNativeAdCallToType) {
     UMTMediationNativeAdCallToTypeMessage        = 6,  // send messages
     UMTMediationNativeAdCallToTypeEmail          = 7,  // send email
     UMTMediationNativeAdCallToTypeVideoAdDetail  = 8,   // video ad details page
+    UMTMediationNativeAdCallToTypeWechat = 9,          // open wechat
+    UMTMediationNativeAdCallToTypeDeepLink = 10,       // deep link
     UMTMediationNativeAdCallToTypeOthers         = 100 //其他广告sdk返回的类型
 };
 

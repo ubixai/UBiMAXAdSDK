@@ -25,7 +25,18 @@
 /// @param ext 回传信息
 - (void)splashAd:(id<UMTCustomSplashAdapter>_Nonnull)adapter didLoadFailWithError:(NSError *_Nullable)error ext:(NSDictionary *)ext;
 
-/// 在广告即将展示时调用，直接调用即可，无需做响应判断
+/// 在广告渲染成功时调用，直接调用即可，无需做响应判断
+/// @param adapter 当前适配器
+/// @param ext 回传信息
+- (void)splashAd:(id<UMTCustomSplashAdapter>_Nonnull)adapter didRenderSuccessWithExt:(NSDictionary *)ext;
+
+/// 在广告渲染失败时调用，非模板广告无需调用，直接调用即可，无需做响应判断
+/// @param adapter 当前适配器
+/// @param error 错误信息
+- (void)splashAd:(id<UMTCustomSplashAdapter>_Nonnull)adapter didRenderFailedWithError:(NSError *)error;
+
+
+/// 在广告曝光时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
 - (void)splashAdDidShow:(id<UMTCustomSplashAdapter>_Nonnull)adapter;
 
@@ -62,23 +73,9 @@
 /// @param adapter 当前适配器
 - (void)splashAdWillDismissFullScreenModal:(id<UMTCustomSplashAdapter>_Nonnull)adapter;
 
-/// 在模板广告渲染成功时调用，非模板广告无需调用，直接调用即可，无需做响应判断
-/// @param adapter 当前适配器
-- (void)splashAdDidRenderSuccess:(id<UMTCustomSplashAdapter>_Nonnull)adapter;
-
-/// 在广告渲染失败时调用，非模板广告无需调用，直接调用即可，无需做响应判断
-/// @param adapter 当前适配器
-/// @param error 错误信息
-- (void)splashAd:(id<UMTCustomSplashAdapter>_Nonnull)adapter didRenderFailedWithError:(NSError *)error;
-
 /// 在广告倒计时结束时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
 - (void)splashAdDidCountDownToZero:(id<UMTCustomSplashAdapter>_Nonnull)adapter;
-
-/// 在广告视频播放完成或者出错时调用，直接调用即可，无需做响应判断
-/// @param adapter 当前适配器
-/// @param error 播放错误
-- (void)splashAd:(id<UMTCustomSplashAdapter>_Nonnull)adapter didPlayFinishWithError:(NSError *)error;
 
 /// 广告点击跳转使用的控制器
 - (UIViewController *)viewControllerForPresentingModalView;

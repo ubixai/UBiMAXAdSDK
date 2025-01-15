@@ -29,7 +29,13 @@
 
 /// 在广告中视频素材加载完成时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-- (void)rewardedVideoAdVideoDidLoad:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter;
+/// @param ext 回传信息
+- (void)rewardedVideoAd:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter videoDidLoadWithExt:(NSDictionary *)ext;
+
+/// 在广告渲染失败时调用，非模板广告无需调用，直接调用即可，无需做响应判断
+/// @param adapter 当前适配器
+/// @param error 错误信息
+- (void)rewardedVideoAd:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter renderFailedWithError:(NSError *_Nullable)error;
 
 /// 在广告已经展示时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
@@ -66,15 +72,6 @@
 /// 在广告被点击跳过时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
 - (void)rewardedVideoAdDidClickSkip:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter;
-
-/// 在模板广告渲染成功时调用，非模板广告无需调用，直接调用即可，无需做响应判断
-/// @param adapter 当前适配器
-- (void)rewardedVideoAdRenderSuccess:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter;
-
-/// 在广告渲染失败时调用，非模板广告无需调用，直接调用即可，无需做响应判断
-/// @param adapter 当前适配器
-/// @param error 错误信息
-- (void)rewardedVideoAd:(id<UMTCustomRewardedVideoAdapter>_Nonnull)adapter renderFailedWithError:(NSError *_Nullable)error;
 
 /// 在广告即将展示详情页或者app store时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器

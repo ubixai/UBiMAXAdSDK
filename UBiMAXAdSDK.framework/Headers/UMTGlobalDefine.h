@@ -24,20 +24,6 @@ const static NSString *  kUMTPrivacyForbiddenIDFA = @"kUMTPrivacyForbiddenIDFA";
 const static NSString * kUMTPrivacyCustomIDFA = @"kUMTPrivacyCustomIDFA";
 
 const static NSString *kUMTRootViewController = @"kUMTRootViewController";
-const static NSString *kUMTSplashBottomView = @"kUMTSplashBottomView";
-
-// 渲染方式， NSNumber, 1: 模版，2: 自渲染
-const static NSString *kUMTAdRenderType = @"kUMTAdRenderType";
-const static NSString *kUMTNativeSizeWidth = @"kUMTNativeSizeWidth";
-const static NSString *kUMTNativeSizeHeight = @"kUMTNativeSizeHeight";
-/// 低价过滤，NSString，仅支持整数值, 单位：分
-const static NSString *kUMTAdBidFloor = @"kUMTAdBidFloor";
-/** NSNumber 竞价类型 1:in-app-bidding 2:waterfall */
-const static NSString *kUMTBidType = @"kUMTBidType";
-/** 枚举 UMTVideoMuteType */
-const static NSString *kUMTVideoMute = @"kUMTVideoMute";
-/** 枚举 UMTVideoPlayType */
-const static NSString *kUMTVideoPlayNet = @"kUMTVideoPlayNet";
 
 // 广告类型
 typedef NS_ENUM(NSInteger, UMTAdType) {
@@ -53,9 +39,8 @@ typedef NS_ENUM(NSInteger, UMTAdType) {
 
 typedef NS_ENUM(NSInteger, UMTAdRenderType) {
     UMTAdRenderType_UnKnown = 0, // 未知
-    UMTAdRenderType_Temple = 1, // 模版
+    UMTAdRenderType_Temple = 1, // 模板
     UMTAdRenderType_Custom = 2, // 自渲染
-    UMTAdRenderType_Auto = 3, // 自适应
 };
 
 typedef NS_ENUM(NSInteger, UMTAdBidType) {

@@ -26,6 +26,11 @@ typedef struct {
 
 /// 自定义adapter广告类型基本协议
 @protocol UMTCustomAdapterDelegate <NSObject>
+/// 当前加载的广告的状态
+- (UMTMediatedAdStatus)mediatedAdStatus;
+
+/// 在适配器被释放前
+- (void)destroyAd;
 
 @optional
 
@@ -45,9 +50,6 @@ typedef struct {
 - (void)didReceiveBidResult:(nonnull UMTMediaBidResult *)result;
 
 - (void)didReceiveAdConfig:(NSDictionary *)config;
-
-/// 当前加载的广告的状态
-- (UMTMediatedAdStatus)mediatedAdStatus;
 
 /// 开发者无需实现，系统自动生成
 @property (nonatomic, assign) BOOL isCustomAdapter;

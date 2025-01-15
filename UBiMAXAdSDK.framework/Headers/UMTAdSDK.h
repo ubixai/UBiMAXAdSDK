@@ -28,6 +28,7 @@
 #import <UBiMAXAdSDK/UMTError.h>
 #import <UBiMAXAdSDK/UMTNativeAdView.h>
 #import <UBiMAXAdSDK/UMTAdnMaterial.h>
+#import <UBiMAXAdSDK/UMTAdLoadingParams.h>
 
 //! Project version number for UMTAdSDK.
 FOUNDATION_EXPORT double UMTAdSDKVersionNumber;

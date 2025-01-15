@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface UMTNativeAdView : UIView <UMTNativeAdViewProtocol>
-/// 模版广告视图
+/// 模板广告视图
 @property (nonatomic, strong) UIView *adxExpressView;
 /// 广告视图唯一标识
 @property (nonatomic, copy, readonly) NSString *adViewId;

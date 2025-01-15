@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UMTAdnSDKInitConfig : UMTInterfaceBaseObject
 /// 用户自定义配置
 //@property (nonatomic, strong, readonly) UMTUserConfig *userConfig;
+/// 自定义拓展参数
+@property (nonatomic, strong, readonly) NSString *customExtParamsStr;
 
 /// appID
 @property (nonatomic, copy, readonly) NSString *appID;
@@ -21,8 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// appName
 @property (nonatomic, copy, readonly) NSString *appName;
+/// adn id
+@property (nonatomic, assign, readonly) NSInteger adnId;
 /// adn的标识
-@property (nonatomic, copy, readonly) NSString *adnPlatformName;
+@property (nonatomic, copy, readonly) NSString *adnName;
 
 /// 是否可用状态
 @property (nonatomic, assign, readonly) BOOL valid;

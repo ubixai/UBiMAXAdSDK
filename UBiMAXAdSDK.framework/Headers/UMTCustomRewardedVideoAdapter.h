@@ -22,7 +22,7 @@
 
 /// 展示广告的方法
 /// @param viewController 控制器对象
-/// @param parameter 展示广告的参数，由GroMore接入媒体配置
+/// @param parameter 展示广告的参数，接入媒体配置
 - (void)showAdFromRootViewController:(UIViewController *_Nonnull)viewController parameter:(NSDictionary *)parameter;
 
 

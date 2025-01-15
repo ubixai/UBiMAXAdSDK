@@ -11,6 +11,7 @@
 #endif
 
 #import "UMTAdapterRewardAdInfo.h"
+#import "UMTAdLoadingParams.h"
 #import "UMTAdnSDKInitConfig.h"
 #import "UMTCustomAdapter.h"
 #import "UMTCustomAdapterDelegate.h"
