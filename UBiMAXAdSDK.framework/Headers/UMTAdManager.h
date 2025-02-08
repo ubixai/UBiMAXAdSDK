@@ -6,7 +6,8 @@
 //
 
 #import <UBiMAXAdSDK/UMTAdSDK.h>
-#import "UMTAd.h"
+#import "UMTVideoConfig.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ extern NSString * const kUMTKey_Splash_Window;
 
 @protocol UMTAdDelegate;
 @class UMTAd;
+@class UMTNativeAdView;
+
 
 @interface UMTAdManager : UMTInterfaceBaseObject
 
@@ -27,6 +30,9 @@ extern NSString * const kUMTKey_Splash_Window;
 
 - (void)registerViewAd:(UMTAd *)ad extra:(NSDictionary *)extra;
 
+- (void)updateVideoAction:(UMTNativeVideoAction)action ad:(UMTAd *)ad extra:(NSDictionary *)extra;
+
+- (NSDictionary *)videoPlayInfoOfAd:(UMTAd *)ad extra:(NSDictionary *)extra;
 @end
 
 NS_ASSUME_NONNULL_END

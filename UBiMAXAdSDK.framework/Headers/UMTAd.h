@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class UMTAd;
+@class UMTAdnInfo;
 @class UMTError;
 
 @protocol UMTAdDelegate <NSObject>
@@ -37,13 +38,15 @@ typedef NS_ENUM(NSInteger, UMTAdShowStatus) {
 
 @property (nonatomic, assign) UMTAdShowStatus showStatus;
 
+@property (nonatomic, strong, readonly) UMTAdnInfo *winnerAdnInfo;
+
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
 - (BOOL)isReady;
 
 - (uint64_t)getEcpm;
 
-- (NSString *)getAdNetworkName;
+- (NSString *)getAdNetworkName DEPRECATED_MSG_ATTRIBUTE("接口即将废弃，请使用winnerAdnInfo新接口");
 
 @end
 

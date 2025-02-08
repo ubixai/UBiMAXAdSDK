@@ -77,7 +77,7 @@ typedef UMTMediationNativeAdMode;
 /// 广告安装包体大小，单位KB，如果没有值返回-1
 @property (nonatomic, assign, readonly) NSInteger appSize;
 
-/// 视频时长，单位秒，如果没有值返回0
+/// 视频时长，单位 ms，如果没有值返回0
 @property (nonatomic, assign, readonly) NSInteger videoDuration;
 
 /// 视频纵横比(width/height)，如果没有值或者异常返回0

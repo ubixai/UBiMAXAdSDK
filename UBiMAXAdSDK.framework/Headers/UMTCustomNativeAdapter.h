@@ -13,6 +13,8 @@
 #import "UMTCustomNativeAdapterBridge.h"
 #import "UMTMediationNativeAd.h"
 #import "UMTNativeAdView.h"
+#import "UMTAd.h"
+#import "UMTVideoConfig.h"
 
 
 /// 自定义Native广告的adapter广告协议
@@ -35,7 +37,7 @@
 - (void)setRootViewController:(UIViewController *)viewController forExpressAdView:(UIView *)expressAdView;
 
 /// 渲染广告，为非模板广告时会回调该方法
-- (void)renderView:(UMTNativeAdView *)nativeAdView selfRenderView:(nonnull UIView *)selfRenderView;
+- (void)renderView:(UMTNativeAdView *)nativeAdView selfRenderView:(nonnull UIView<UMTMediationNativeSelfRenderViewCreator> *)selfRenderView;
 
 /// 为非模板广告设置控制器
 /// @param viewController 控制器
@@ -62,6 +64,14 @@
 /// @param expressAdView 模板广告视图
 /// @param mediatedNativeAd 广告数据
 - (void)adViewWillAddToSuperViewWithExpressAdView:(__kindof UIView *)expressAdView orMediatedNativeAd:(UMTMediationNativeAd *)mediatedNativeAd;
+
+/// 收到视频播放控制事件
+/// @param action 播放/暂停/停止/静音
+///  @param nativeAdView 广告视图
+- (void)updateVideoAction:(UMTNativeVideoAction)action nativeAd:(UMTNativeAdView *)nativeAdView parameters:(NSDictionary *)parameters;
+
+/// 视频已播放时长，单位 ms
+- (CGFloat)videoPlayTimeOfNativeAd:(UMTNativeAdView *)view;
 
 /// 代理，开发者需使用该对象回调事件，Objective-C下自动生成无需设置，Swift需声明
 @property (nonatomic, weak, nullable) id<UMTCustomNativeAdapterBridge> bridge;

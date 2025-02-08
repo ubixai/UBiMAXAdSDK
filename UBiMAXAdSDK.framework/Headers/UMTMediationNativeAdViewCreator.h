@@ -47,4 +47,10 @@
 
 @end
 
+@protocol UMTMediationNativeSelfRenderViewCreator <NSObject>
+/// 媒体视图， 自渲染广告的 图片或者视频容器
+@property (nonatomic, strong) UIView *mediaView;
+
+@end
+
 #endif /* UMTMediationNativeAdViewCreator_h */

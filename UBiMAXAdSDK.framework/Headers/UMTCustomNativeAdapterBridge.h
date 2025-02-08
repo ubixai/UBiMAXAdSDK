@@ -101,6 +101,10 @@
 - (void)nativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter dislikeWithMediatedNativeAd:(id _Nonnull)nativeAd closeReasons:(NSArray<NSString *> *_Nullable)filterWords;
 
 #pragma mark - video
+/// 视频广告中视频播放开始后，需开启播放进度时候调用，直接调用即可，无需做响应判断
+/// @param adapter 当前适配器
+/// @param nativeAd 广告数据，native广告请传递原始数据（即UMTMediationNativeAd.originMediatedNativeAd），express广告请传递上报UBiMAX的UIView
+- (void)startVideoPlayProgressWithNativeAd:(id<UMTCustomNativeAdapter>_Nonnull)adapter andNativeAd:(id _Nonnull)nativeAd;
 
 /// 视频广告中视频播放状态变更的时候调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器

@@ -31,6 +31,7 @@
 #import "UMTMediationNativeAdViewCreator.h"
 #import "UMTAd.h"
 #import "UMTAdManager.h"
+#import "UMTAdnInfo.h"
 #import "UMTAdnMaterial.h"
 #import "UMTAdSDK.h"
 #import "UMTAdSDKConfiguration.h"
@@ -40,6 +41,7 @@
 #import "UMTInterfaceBaseObject.h"
 #import "UMTMediaBidResult.h"
 #import "UMTNativeAdView.h"
+#import "UMTVideoConfig.h"
 
 FOUNDATION_EXPORT double UBiMAXAdSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char UBiMAXAdSDKVersionString[];
