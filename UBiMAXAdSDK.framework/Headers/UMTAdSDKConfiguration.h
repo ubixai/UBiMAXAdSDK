@@ -67,6 +67,8 @@ typedef NS_ENUM (int, UMTUserInfoSubscribe) {
 @property (nonatomic, assign) BOOL limitPersonalAds;
 /**  是否打开日志模式，默认不打开  **/
 @property (nonatomic, assign) BOOL debugLogEnabled;
+/**  传感器是否生效，默认打开:YES  **/
+@property (nonatomic, assign) BOOL sensorEnabled;
 // 流量分组信息配置
 @property (nonatomic, strong) UMTUserInfoConfig *userInfoConfig;
 

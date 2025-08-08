@@ -20,6 +20,8 @@ const static NSString *kUMTPrivacyLimitPersonalAds = @"kUMTPrivacyLimitPersonalA
 const static NSString *  kUMTPrivacyForbiddenCAID = @"kUMTPrivacyForbiddenCAID";
 /// 【可选】NSNumber，是否禁止IDFA：0-不禁止，1-禁止，默认为0。
 const static NSString *  kUMTPrivacyForbiddenIDFA = @"kUMTPrivacyForbiddenIDFA";
+/// 【可选】NSNumber，是否禁止传感器：0-不禁止，1-禁止，默认为0。
+const static NSString * kUMTPrivacyForbiddenSensor = @"kUMTPrivacyForbiddenSensor";
 /// 【可选】NSString，自定义 idfa
 const static NSString * kUMTPrivacyCustomIDFA = @"kUMTPrivacyCustomIDFA";
 

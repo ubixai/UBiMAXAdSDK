@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UBiMAXAdSDK'
-  s.version          = '1.1.2'
+  s.version          = '1.2.0'
   s.summary          = 'UBiMAXAdSDK'
   s.homepage         = 'https://www.ubixai.com/product/md'
   # s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'UBiMAXAdSDK.framework'
 
   s.dependency 'UBiXDaq'
-  
+
 end

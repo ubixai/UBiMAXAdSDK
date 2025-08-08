@@ -40,6 +40,12 @@ extern NSString *const UMTAdLoadingParamExtJson;
 /// 自定义底部视图，UIView
 extern NSString *const UMTAdLoadingParamSPCustomBottomView;
 
+#pragma mark - 插屏广告
+
+/// 自定义扩展参数key
+/// 插屏点击后是否关闭广告 NSNumber ,默认 @NO 不关闭
+extern NSString *const UMTAdLoadingParamInter_CloseAfterClick;
+
 #pragma mark - Native广告
 
 /// 期望广告尺寸，NSValue/CGSize
