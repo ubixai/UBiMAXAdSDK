@@ -11,12 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 用户性别, 0: Unknown, 1: Male, 2: Female
-typedef NS_ENUM (int, UMTUserInfoGender) {
-    UMTUserInfoGender_Unknown                  = 0,
-    UMTUserInfoGender_Male                     = 1,
-    UMTUserInfoGender_Female                   = 2,
-};
 /// 付费用户, 0: 未知；1: 否；2: 是
 typedef NS_ENUM (int, UMTUserInfoSubscribe) {
     UMTUserInfoSubscribe_Unknown              = 0,
@@ -31,17 +25,14 @@ typedef NS_ENUM (int, UMTUserInfoSubscribe) {
 @property (nonatomic, copy) NSString *channel;
 /// 子渠道， 字符的规则：[A-Za-z0-9_]
 @property (nonatomic, copy) NSString *subChannel;
-/// 用户年龄，用户的年龄段。
-/// [1-18):1;[18-24):18;[24-31):24;[31- 41):31;[41-51):41;50 以上传 50
-@property (nonatomic, assign) int age;
-/// 用户性别
-@property (nonatomic, assign) UMTUserInfoGender gender;
 /// 付费用户, 0: 未知；1: 否；2: 是
 @property (nonatomic, assign) UMTUserInfoSubscribe isSubscriber;
 /// 流量分组ID或者标签ID
 @property (nonatomic, copy) NSString *pubSegmentId;
 
 @end
+
+extern NSString *const kUMTExtraMap_StorageSpaceEnabled;
 
 @interface UMTAdSDKConfiguration : NSObject
 
@@ -69,6 +60,13 @@ typedef NS_ENUM (int, UMTUserInfoSubscribe) {
 @property (nonatomic, assign) BOOL debugLogEnabled;
 /**  传感器是否生效，默认打开:YES  **/
 @property (nonatomic, assign) BOOL sensorEnabled;
+
+/**
+  设置扩展信息
+  已支持的key有：
+ kUMTExtraMap_StorageSpaceEnabled, 是否允许获取可用存储空间大小：，默认开启，值为字符串格式，"0"：不可获取；非"0"：可以获取
+ */
+@property (nonatomic,strong) NSDictionary <NSString *, NSString *> *extraMap;
 // 流量分组信息配置
 @property (nonatomic, strong) UMTUserInfoConfig *userInfoConfig;
 

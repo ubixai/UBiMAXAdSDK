@@ -46,6 +46,12 @@ extern NSString *const UMTAdLoadingParamSPCustomBottomView;
 /// 插屏点击后是否关闭广告 NSNumber ,默认 @NO 不关闭
 extern NSString *const UMTAdLoadingParamInter_CloseAfterClick;
 
+#pragma mark - 横幅广告
+
+/// banner的父容器
+extern NSString *const UMTAdLoadingParamBannerParentView;
+
+
 #pragma mark - Native广告
 
 /// 期望广告尺寸，NSValue/CGSize

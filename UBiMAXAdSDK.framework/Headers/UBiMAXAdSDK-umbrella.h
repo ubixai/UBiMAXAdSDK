@@ -15,6 +15,8 @@
 #import "UMTAdnSDKInitConfig.h"
 #import "UMTCustomAdapter.h"
 #import "UMTCustomAdapterDelegate.h"
+#import "UMTCustomBannerAdapter.h"
+#import "UMTCustomBannerAdapterBridge.h"
 #import "UMTCustomConfigAdapter.h"
 #import "UMTCustomInterstitialAdapter.h"
 #import "UMTCustomInterstitialAdapterBridge.h"
