@@ -1,0 +1,6 @@
+framework module UBiMAXAdSDK {
+  umbrella header "UBiMAXAdSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

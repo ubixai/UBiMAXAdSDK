@@ -16,8 +16,6 @@ const static NSString *  kUMTPrivacyLongitude = @"kUMTPrivacyLongitude";
 const static NSString *  kUMTPrivacyLatitude = @"kUMTPrivacyLatitude";
 /// 【可选】NSNumber，是否限制个性化广告:0-不限制，1-限制，默认为0。
 const static NSString *kUMTPrivacyLimitPersonalAds = @"kUMTPrivacyLimitPersonalAds";
-/// 【可选】NSNumber，是否禁止CAID：0-不禁止，1-禁止，默认为0。
-const static NSString *  kUMTPrivacyForbiddenCAID = @"kUMTPrivacyForbiddenCAID";
 /// 【可选】NSNumber，是否禁止IDFA：0-不禁止，1-禁止，默认为0。
 const static NSString *  kUMTPrivacyForbiddenIDFA = @"kUMTPrivacyForbiddenIDFA";
 /// 【可选】NSNumber，是否禁止传感器：0-不禁止，1-禁止，默认为0。
