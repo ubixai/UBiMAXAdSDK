@@ -63,7 +63,7 @@
 
 /// 在广告关闭时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
-//- (void)splashAdDidClose:(id<UMTCustomSplashAdapter>_Nonnull)adapter withType:(BUSplashAdCloseType)closeType;
+//- (void)splashAdDidClose:(id<UMTCustomSplashAdapter>_Nonnull)adapter withType:(UMTSplashAdCloseType)closeType;
 
 /// 在广告即将展示详情页或者app store时调用，直接调用即可，无需做响应判断
 /// @param adapter 当前适配器
